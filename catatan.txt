@@ -1,0 +1,15 @@
+Liveness Probe : 
+Readiness Probe :
+Startup Probe :
+
+# Mekanisme pengecekan Probe
+1. Http Get
+2. TCP Socket
+3. Command Exec
+
+# Konfigurasi Probe
+- initialDelaySeconds, waktu setelah container jalan dan dilakukan pengecekan, default nya 0
+- periodSeconds, seberapa sering pengecekan dilakukan, default nya 10
+- timeoutSeconds, waktu timeout ketika pengecekan gagal, default 1
+- successThreshold, minimum dianggap sukses setelah berstatus failure, default 1
+- failureThreshold, minimum dianggap gagal, default 3
