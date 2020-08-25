@@ -13,3 +13,9 @@ Startup Probe :
 - timeoutSeconds, waktu timeout ketika pengecekan gagal, default 1
 - successThreshold, minimum dianggap sukses setelah berstatus failure, default 1
 - failureThreshold, minimum dianggap gagal, default 3
+
+# Operasi Match Expresion
+- In : value label harus ada di value in
+- NotIn : value label tidak boleh ada di value in
+- Exists : label harus ada
+- NotExists : label tidak boleh ada
