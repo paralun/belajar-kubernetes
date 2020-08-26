@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: simple-job
+spec:
+  completions: 6
+  parallelism: 3
+  selector:
+    matchLabels:
+      app: simple-job
+  template:
+    metadata:
+      name: simple-job
+      labels:
+        app: simple-job
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: python-job
+          image: paralun/python-job:v1
