@@ -1,0 +1,19 @@
+apiVersion: batch/v1beta1
+metadata:
+  name: simple-cronjob
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          name: simple-cronjob
+          labels:
+            app: simple-cronjob
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: python-job
+              image: paralun/python-job:v1       
+
+    
