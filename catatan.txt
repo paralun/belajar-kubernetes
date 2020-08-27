@@ -19,3 +19,9 @@ Startup Probe :
 - NotIn : value label tidak boleh ada di value in
 - Exists : label harus ada
 - NotExists : label tidak boleh ada
+
+# Service
+- ClusterIP : digunakan untuk komunikasi antar pod dalam cluster kubernetes
+- ExternalName : digunakan untuk komunikasi ke luar sistem
+- NodePort : untuk mengekspos service supaya aplikasi bisa di akses dari luar menggunakan ip node
+- LoadBalance : Mengekspos service secara external dengan menggunakan LoadBalancer
