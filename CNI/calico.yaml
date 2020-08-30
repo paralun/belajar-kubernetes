@@ -1,6 +1,3 @@
----
-# Source: calico/templates/calico-config.yaml
-# This ConfigMap is used to configure a self-hosted Calico installation.
 kind: ConfigMap
 apiVersion: v1
 metadata:
@@ -638,6 +635,8 @@ spec:
               value: "info"
             - name: FELIX_HEALTHENABLED
               value: "true"
+            - name: IP_AUTODETECTION_METHOD
+              value: "interface=ens33"
           securityContext:
             privileged: true
           resources:
@@ -780,13 +779,5 @@ kind: ServiceAccount
 metadata:
   name: calico-kube-controllers
   namespace: kube-system
----
-# Source: calico/templates/calico-etcd-secrets.yaml
-
----
-# Source: calico/templates/calico-typha.yaml
-
----
-# Source: calico/templates/configure-canal.yaml
 
 
