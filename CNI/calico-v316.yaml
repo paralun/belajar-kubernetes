@@ -3687,7 +3687,7 @@ spec:
             - name: FELIX_HEALTHENABLED
               value: "true"
             - name: IP_AUTODETECTION_METHOD
-              value: "interface=ens33"	
+              value: "interface=ens33"
           securityContext:
             privileged: true
           resources:
